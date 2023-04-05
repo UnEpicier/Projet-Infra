@@ -1,0 +1,12 @@
+[Unit]
+Description=Auto update system
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+ExecStart=/srv/auto-updater.sh
+User=root
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target
