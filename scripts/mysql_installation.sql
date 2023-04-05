@@ -1,0 +1,10 @@
+UPDATE mysql.user SET Password=PASSWORD('toto') WHERE User='root';
+DELETE FROM mysql.user WHERE User='';
+DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');
+DROP DATABASE IF EXISTS test;
+DELETE FROM mysql.db WHERE Db='test' OR Db='test\\_%';
+FLUSH PRIVILEGES;
+CREATE DATABASE groupie DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+CREATE USER 'api'@'10.107.1.13' IDENTIFIED BY 'toto';
+GRANT ALL PRIVILEGES ON groupie.* TO 'api'@'10.107.1.13';
+FLUSH PRIVILEGES;
