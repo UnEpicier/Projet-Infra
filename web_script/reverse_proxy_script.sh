@@ -82,3 +82,6 @@ echo "server {
 }" > example.com.conf
 
 docker run --name reverse-proxy -p 80:80 -p 443:443 -v $PWD/nginx.conf:/etc/nginx/nginx.conf -v $PWD/example.com.conf:/etc/nginx/conf.d/example.com.conf -v ~/certs/:/etc/nginx/certs -d nginx
+
+#Pour le monitoring
+firewall-cmd --add-port=9100/tcp --permanent

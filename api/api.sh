@@ -29,4 +29,7 @@ WantedBy=multi-user.target" << EOF > /etc/systemd/system/musicapi.service
 systemctl daemon-reload
 systemctl enable musicapi --now
 
+#Pour le monitoring
+firewall-cmd --add-port=9100/tcp --permanent
+
 exit

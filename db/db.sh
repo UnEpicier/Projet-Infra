@@ -17,4 +17,8 @@ systemctl restart mariadb
 firewall-cmd --permanent --add-port=3306/tcp
 firewall-cmd --reload
 
+#Pour le monitoring
+firewall-cmd --add-port=9100/tcp --permanent
+firewall-cmd --add-port=9104/tcp --permanent
+
 exit

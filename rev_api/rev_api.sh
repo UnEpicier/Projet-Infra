@@ -38,4 +38,7 @@ systemctl restart nginx
 firewall-cmd --permanent --add-service=https
 firewall-cmd --reload
 
+#Pour le monitoring
+firewall-cmd --add-port=9100/tcp --permanent
+
 exit

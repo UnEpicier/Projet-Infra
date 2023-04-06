@@ -40,3 +40,6 @@ WantedBy=multi-user.target" > /etc/systemd/system/api.service
 systemctl daemon-reload
 
 systemtctl enable api --now
+
+#Pour le monitoring
+firewall-cmd --add-port=9100/tcp --permanent
