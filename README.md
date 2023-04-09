@@ -4,19 +4,19 @@
 
 - 6 machines virtuelles sur le même réseau (exemple :10.108.1.10 / 10.108.1.11...)
 
-- Avoir un échange de clé SSH sur chaque machines virtuelles
+- Avoir un échange de clé SSH sur chaque machine virtuelle
 
-- Un utilisateur capable d'éffectuer des commandes root sans le besoin de sudo
+- Un utilisateur capable d'effectuer des commandes root sans le besoin de sudo
 
 ## Installation
 
-> clone le repos
+> Clonez le repos
 
 ```sh
 > git clone https://github.com/UnEpicier/Infra.git
 ```
 
-> Puis lancé le script directement sur votre machine
+> Puis lancez le script directement sur votre machine
 
 ```sh
 # Pour un lancement sur une machine Linux
