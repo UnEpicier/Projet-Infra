@@ -1,0 +1,3 @@
+CREATE USER 'export'@'localhost' IDENTIFIED BY 'toto';
+GRANT PROCESS, REPLICATION CLIENT, SELECT ON *.* TO 'export'@'localhost';
+FLUSH PRIVILEGES;

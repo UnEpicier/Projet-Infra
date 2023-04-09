@@ -6,7 +6,7 @@ dnf autoremove -y
 
 dnf module install nodejs -y
 
-dnf install git
+dnf install git -y
 
 git clone https://github.com/UnEpicier/MusicAPI-Int.git
 
@@ -39,7 +39,7 @@ WantedBy=multi-user.target" > /etc/systemd/system/api.service
 
 systemctl daemon-reload
 
-systemtctl enable api --now
+systemyesctl enable api --now
 
 #Pour le monitoring
 firewall-cmd --add-port=9100/tcp --permanent

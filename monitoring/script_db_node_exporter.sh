@@ -1,4 +1,7 @@
 #!/bin/bash
+
+dnf install wget -y
+
 groupadd --system prometheus
 useradd -s /sbin/nologin --system -g prometheus prometheus
 curl -s https://api.github.com/repos/prometheus/mysqld_exporter/releases/latest   | grep browser_download_url   | grep linux-amd64 | cut -d '"' -f 4   | wget -qi -

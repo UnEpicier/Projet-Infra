@@ -1,0 +1,3 @@
+CREATE USER 'mysqld_exporter'@'localhost' IDENTIFIED BY 'toto' WITH MAX_USER_CONNECTIONS 3;
+GRANT PROCESS, REPLICATION CLIENT, SELECT ON . TO 'mysqld_exporter'@'localhost';
+FLUSH PRIVILEGES;
