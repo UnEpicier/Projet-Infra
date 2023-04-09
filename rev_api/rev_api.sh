@@ -4,7 +4,8 @@ dnf update -y
 dnf upgrade -y
 dnf autoremove -y
 
-dnf install nginx epel-release certbot python3-certbot-nginx -y
+dnf install epel-release -y
+dnf install nginx certbot python3-certbot-nginx -y
 systemctl enable nginx --now
 
 cd /root
