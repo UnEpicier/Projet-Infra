@@ -1,42 +1,28 @@
-# Documentation pour l'automatisation
+# Installation serveur API
 
-Avant d'utiliser cette documentation vous devez avoir créé 6 machines virtuelles avec chacune une ip différente mais dans le même réseau (exemple :10.108.1.10 / 10.108.1.11...)
+## Prérequis
 
-## Connexion aux machine par échanges de clé
+- 6 machines virtuelles sur le même réseau (exemple :10.108.1.10 / 10.108.1.11...)
 
+- Avoir un échange de clé SSH sur chaque machines virtuelles
 
-> ### Vérifier si ssh est bien installé sur votre machine
+- Un utilisateur capable d'éffectuer des commandes root sans le besoin de sudo
 
-```sh
-> ssh
+## Installation
 
-usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
-
-           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
-
-           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
-
-           [-i identity_file] [-J [user@]host[:port]] [-L address]
-
-           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
-
-           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
-
-           [-w local_tun[:remote_tun]] destination [command]
-```
-
-> si ceci est affiché alors ssh est installé sinon veuillez taper les commandes suivantes :
+> clone le repos
 
 ```sh
-> sudo apt-get install openssh-server
-
-> sudo systemctl enable ssh
-
-> sudo systemctl start ssh
+> git clone https://github.com/UnEpicier/Infra.git
 ```
 
-
-> ### Génération de la clé sur votre machine
+> Puis lancé le script directement sur votre machine
 
 ```sh
+# Pour un lancement sur une machine Linux
+> ./Infra/start.sh
 ```
+
+> Pour un lancement sur Windows, effectuez ce tutorial pour pouvoir installer un terminal bash
+
+[Lien du tutoriel](https://people.montefiore.uliege.be/nvecoven/ci/files/tuto_bash/tuto_bash.html#:~:text=Activation%20de%20Bash,Redémarrez%20ensuite%20votre%20PC.)
