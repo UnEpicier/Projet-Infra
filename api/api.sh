@@ -5,7 +5,7 @@ dnf install -y git
 
 useradd -m api -s /usr/sbin/nologin
 cd /home/api
-git clone https://github/com/UnEpicier/MusicAPI.git
+git clone https://github.com/UnEpicier/MusicAPI.git
 cd MusicAPI
 npm i
 
